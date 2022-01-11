@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvo</title>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+
+<body>
+    <h1>Canvo</h1>
+    <section class="container">
+
+
+        <div class="side-nav">
+
+            <div onclick="change_color(this)" class="color-field" style="background: rgb(218, 84, 84);"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: rgb(111, 142, 226);"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: rgb(96, 235, 228);"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: rgb(171, 238, 95);"></div>
+
+        </div>
+
+        <canvas class="canvas" id="canvas"></canvas>
+
+    </section>
+
+    <div class="prop">
+
+        <div class="input">
+            <input oninput="draw_color = this.value" type="color" class="color-picker">
+            <input oninput="draw_width = this.value" type="range" value="1" min="1" max="100" class="pen-range">
+        </div>
+
+        <div class="buttons">
+            <button onclick="clear_canvas()" class="button-64" type="button">Clear</button>
+            <button onclick="Undo_canvas()" class="button-64" type="button">Undo</button>
+        </div>
+        
+
+    </div>
+</body>
+<script src="/index.js"></script>
+
+</html>
